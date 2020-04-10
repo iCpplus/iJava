@@ -27,8 +27,8 @@ public interface GenericManager<PK extends Serializable, T extends BaseEntity<PK
 
 	/**
 	 * 
-	 * 
 	 * @return a list of all entities
+	 * 
 	 */
 	public List<T> findAll();
 

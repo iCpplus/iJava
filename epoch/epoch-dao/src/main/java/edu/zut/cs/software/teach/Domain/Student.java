@@ -3,7 +3,10 @@ package edu.zut.cs.software.teach.Domain;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-public class Student {
+import edu.zut.software.base.domain.BaseEntity;
+
+
+public class Student extends BaseEntity<Long>{
 	/**
 	 * code of this student
 	 */
