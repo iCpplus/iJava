@@ -8,7 +8,7 @@ public class StudentManagerImpl extends GenericManagerImpl<Long, Student> implem
 
 	@Override
 	public String echo(String message) {
-		String result = "hello" + message + "!";
+		String result = "hello," + message + "!";
 		return result;
 	}
 
