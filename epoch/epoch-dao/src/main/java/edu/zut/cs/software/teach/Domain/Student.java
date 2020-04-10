@@ -7,6 +7,8 @@ import edu.zut.software.base.domain.BaseEntity;
 
 
 public class Student extends BaseEntity<Long>{
+	
+
 	/**
 	 * code of this student
 	 */
