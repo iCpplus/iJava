@@ -1,9 +1,12 @@
 package edu.zut.cs.software.teach.impl;
 
+import org.springframework.stereotype.Service;
+
 import edu.zut.cs.software.teach.Domain.Student;
 import edu.zut.cs.software.teach.service.StudentManager;
 import edu.zut.software.base.impl.GenericManagerImpl;
 
+@Service("studentManager")
 public class StudentManagerImpl extends GenericManagerImpl<Long, Student> implements StudentManager {
 
 	@Override
