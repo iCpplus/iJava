@@ -6,19 +6,30 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
+
 import edu.zut.cs.software.teach.Domain.Student;
 import edu.zut.cs.software.teach.service.StudentManager;
 
 @ContextConfiguration(locations = { "classpath:/applicationContext-service.xml" })
 
-public class StuentManagerTest {
+/**
+ * 
+ * test for StudentManager.
+ * 
+ * @author KouShiXiang
+ *
+ */
+
+public class StuentManagerTest extends AbstractJUnit4SpringContextTests {
 	/**
 	 * Logger for this class
 	 */
 	private static final Logger logger = LogManager.getLogger(StuentManagerTest.class.getName());
 
 //	StudentManager studentManager = new StudentManagerImpl();
-
+//	use Spring Bean
+	
 	StudentManager studentManager;
 
 	@Autowired
