@@ -1,16 +1,24 @@
 package edu.zut.software.base.domain;
 
 import java.io.Serializable;
-
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
+@MappedSuperclass
 public class BaseEntity<PK extends Serializable> extends BaseDomain {
 
 	private static final long serialVersionUID = -6163675075289529459L;
 
+	@Id
+	@Column(name = "ID")
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	protected PK id;
 
 //	@Override
