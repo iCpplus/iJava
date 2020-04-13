@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 
-import edu.zut.cs.software.teach.Domain.Student;
+import edu.zut.cs.software.teach.domain.Student;
 import edu.zut.cs.software.teach.service.StudentManager;
 
 @ContextConfiguration(locations = { "classpath:/applicationContext-service.xml" })

@@ -1,4 +1,4 @@
-package edu.zut.cs.software.teach.Domain;
+package edu.zut.cs.software.teach.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -29,7 +29,7 @@ public class Student extends BaseEntity<Long> {
 	 */
 	@Column
 	String code;
-
+	
 	/**
 	 * name of this student
 	 */

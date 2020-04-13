@@ -1,6 +1,6 @@
 package edu.zut.cs.software.teach.service;
 
-import edu.zut.cs.software.teach.Domain.Student;
+import edu.zut.cs.software.teach.domain.Student;
 import edu.zut.software.base.service.GenericManager;
 
 public interface StudentManager extends GenericManager<Long, Student> {
