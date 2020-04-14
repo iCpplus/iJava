@@ -31,7 +31,7 @@
 					<vendor>hibernate</vendor>
 					<packageToScan>edu.zut</packageToScan>
 					<jdbcDriver>com.mysql.cj.jdbc.Driver</jdbcDriver>
-					<jdbcUrl>jdbc:mysql://localhost:3306/epoch</jdbcUrl>
+					<jdbcUrl>jdbc:mysql://localhost:3306/vscode_epoch</jdbcUrl>
 					<jdbcUser>user</jdbcUser>
 					<jdbcPassword>123456</jdbcPassword>
 					<hibernate.dialect>org.hibernate.dialect.MySQL8Dialect
