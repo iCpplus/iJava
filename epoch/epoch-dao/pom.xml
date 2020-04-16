@@ -1,6 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>zut.software.epoch</groupId>
@@ -44,7 +42,7 @@
 					<vendor>hibernate</vendor>
 					<packageToScan>edu.zut</packageToScan>
 					<jdbcDriver>com.mysql.cj.jdbc.Driver</jdbcDriver>
-					<jdbcUrl>jdbc:mysql://localhost:3306/epoch</jdbcUrl>
+					<jdbcUrl>jdbc:mysql://localhost:3306/vscode_epoch</jdbcUrl>
 					<jdbcUser>user</jdbcUser>
 					<jdbcPassword>123456</jdbcPassword>
 					<hibernate.dialect>org.hibernate.dialect.MySQL8Dialect
@@ -74,7 +72,7 @@
 					<dependency>
 						<groupId>mysql</groupId>
 						<artifactId>mysql-connector-java</artifactId>
-						<version>8.0.15</version>
+						<version>8.0.19</version>
 					</dependency>
 				</dependencies>
 			</plugin>
