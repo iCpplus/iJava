@@ -1,1 +1,1 @@
-just some daily classworks
+just some daily classwork
