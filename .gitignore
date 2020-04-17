@@ -4,4 +4,4 @@
 .classpath
 target/
 .factorypath
-/build
+build/

@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.junit.Test;
 import org.springframework.test.context.ContextConfiguration;
 
 import edu.zut.cs.software.base.BaseAbstractTestCase;
@@ -24,7 +23,7 @@ import edu.zut.cs.software.base.domain.BaseEntity;
  */
 @ContextConfiguration(locations = { "classpath:/applicationContextTest-resources.xml",
 		"classpath:/applicationContext-dao.xml" })
-public class GenericDaoTestCase<PK extends Serializable, T extends BaseEntity, D extends GenericDao<T, PK>>
+public class GenericDaoTestCase<PK extends Serializable, T extends BaseEntity<PK>, D extends GenericDao<T, PK>>
 		extends BaseAbstractTestCase {
 	/**
 	 * Logger for this class

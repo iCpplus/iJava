@@ -22,7 +22,7 @@ import edu.zut.cs.software.base.domain.BaseEntity;
  * @author <a href="mailto:ming616@gmail.com">Liu Xiaoming</a>
  */
 @NoRepositoryBean
-public interface GenericDao<T extends BaseEntity, PK extends Serializable> extends PagingAndSortingRepository<T, PK> {
+public interface GenericDao<T extends BaseEntity<PK>, PK extends Serializable> extends PagingAndSortingRepository<T, PK> {
 
 	List<T> findAll(Example<T> ex);
 }
