@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import edu.zut.cs.software.base.dao.GenericDao;
 import edu.zut.cs.software.base.domain.BaseEntity;
 import edu.zut.cs.software.base.service.GenericManager;
 
@@ -25,6 +26,7 @@ import edu.zut.cs.software.base.service.GenericManager;
 public class GenericManagerImpl<PK extends Serializable, T extends BaseEntity<PK>> implements GenericManager<PK, T> {
 
 	Map<PK, T> entityMap = new HashMap<PK, T>();
+	protected GenericDao<T, PK> dao;
 
 	public void delete(PK id) {
 		this.entityMap.remove(id);
@@ -44,6 +46,11 @@ public class GenericManagerImpl<PK extends Serializable, T extends BaseEntity<PK
 
 	public T save(T entity) {
 		return this.entityMap.put(entity.getId(), entity);
+	}
+
+	@Override
+	public List<T> save(Iterable<T> entities) {
+		return (List<T>) this.dao.saveAll(entities);
 	}
 
 }

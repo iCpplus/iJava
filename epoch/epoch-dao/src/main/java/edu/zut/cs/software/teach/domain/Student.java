@@ -29,7 +29,7 @@ public class Student extends BaseEntity<Long> {
 	 */
 	@Column
 	String code;
-	
+
 	/**
 	 * name of this student
 	 */
@@ -47,6 +47,24 @@ public class Student extends BaseEntity<Long> {
 	 */
 	@Column
 	String gender;
+
+	/**
+	 * grade of this student
+	 */
+	@Column
+	String grade;
+
+	/**
+	 * major of this student
+	 */
+	@Column
+	String major;
+
+	/**
+	 * schoolClass of this student
+	 */
+	@Column
+	String schoolClass;
 
 	public String getCode() {
 		return code;
@@ -78,6 +96,30 @@ public class Student extends BaseEntity<Long> {
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	public String getGrade() {
+		return grade;
+	}
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
+	public String getMajor() {
+		return major;
+	}
+
+	public void setMajor(String major) {
+		this.major = major;
+	}
+
+	public String getSchoolClass() {
+		return schoolClass;
+	}
+
+	public void setSchoolClass(String schoolClass) {
+		this.schoolClass = schoolClass;
 	}
 
 	@Override

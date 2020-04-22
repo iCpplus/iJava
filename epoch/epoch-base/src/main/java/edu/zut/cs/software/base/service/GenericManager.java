@@ -48,10 +48,10 @@ public interface GenericManager<PK extends Serializable, T extends BaseEntity<PK
 	 */
 	public T save(T entity);
 
-//	/**
-//	 * @param entities
-//	 * @return
-//	 */
-//	public List<T> save(Iterable<T> entities);
+	/**
+	 * @param entities
+	 * @return
+	 */
+	public List<T> save(Iterable<T> entities);
 
 }

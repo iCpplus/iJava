@@ -16,7 +16,6 @@ public class StudentDaoTest extends GenericDaoTestCase<Long, Student, StudentDao
 	 */
 	private static final Logger logger = LogManager.getLogger(StudentDaoTest.class.getName());
 
-
 	StudentDao studentDao;
 
 	@Autowired
@@ -26,26 +25,26 @@ public class StudentDaoTest extends GenericDaoTestCase<Long, Student, StudentDao
 	}
 
 	@Test
-	public void testConect() {
+	public void testConnect() {
 		this.studentDao.deleteAll();
 		int num = 10;
-		int id = 5;
-		Student expected = null;
+		// int id = 5;
+		// Student expected = null;
 		for (int i = 1; i <= num; i++) {
 			Student student = new Student();
 			student.setId(Long.valueOf(i));
 			student.setName("studentName_" + i);
-			student.setAddress("stduentAddress_" + i);
-			if (i == id) {
-				expected = student;
-			}
+			student.setAddress("studentAddress_" + i);
+			// if (i == id) {
+			// expected = student;
+			// }
 			this.studentDao.save(student);
 		}
 
 		Iterable<Student> result = this.studentDao.findAll();
 
 		if (logger.isInfoEnabled()) {
-			logger.info("testConect() - Iterable<Student> result={}", result); //$NON-NLS-1$
+			logger.info("testConnect() - Iterable<Student> result={}", result); //$NON-NLS-1$
 		}
 	}
 }
