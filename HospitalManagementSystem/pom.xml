@@ -1,0 +1,127 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>edu.zut.cs.software</groupId>
+	<artifactId>HospitalManagementSystem</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>HMS-base</module>
+		<module>HMS-dao</module>
+		<module>HMS-service</module>
+		<module>HMS-web</module>
+		<module>HMS-client</module>
+	</modules>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+		<java.version>13</java.version>
+		<spring.version>5.2.5.RELEASE</spring.version>
+		<spring-data-jpa.version>2.2.6.RELEASE</spring-data-jpa.version>
+		<hibernate.version>5.4.14.Final</hibernate.version>
+		<aspectj.version>1.9.5</aspectj.version>
+		<junit.version>4.12</junit.version>
+		<log4j.version>2.13.1</log4j.version>
+		<slf4j.version>1.7.30</slf4j.version>
+	</properties>
+
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${spring-data-jpa.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+
+
+		<!-- ============== test begin ============== -->
+		<dependency><!-- JUnit -->
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- ============== test end ============== -->
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>13</source>
+					<target>13</target>
+					<release>13</release>
+				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.9.0</version>
+			</plugin>
+			<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-project-info-reports-plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>3.0.0</version>
+			</plugin>
+
+
+		</plugins>
+	</build>
+
+</project>

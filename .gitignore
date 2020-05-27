@@ -1,0 +1,9 @@
+#
+.settings/
+.project
+.classpath
+target/
+.factorypath
+build/
+.vscode
+.war
